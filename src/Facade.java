@@ -1,4 +1,13 @@
+import java.io.*;
 public class Facade {
+
+	public Facade(){
+		System.out.println("**********************************************************");
+		System.out.println("                      Facade Pattern                            ");
+		System.out.println("**********************************************************");
+		new Loginpage();
+
+	}
 
 	private int UserType;
 
@@ -58,4 +67,6 @@ public class Facade {
 
 	}
 
+	public void Loginpage() {
+	}
 }
