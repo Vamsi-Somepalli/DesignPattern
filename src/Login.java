@@ -11,7 +11,7 @@ public class Login {
     public int selectedUserType() {
         boolean validentry = false;
         while (!validentry) {
-            System.out.println("Please Select Login Type \n0. Buyer\n1.Seller");
+            System.out.println("Please Select Login Type \n0.Buyer\n1.Seller");
             Usertype = ioscanner.nextInt();
             if (Usertype == 0 || Usertype == 1) {
                 validentry = true;

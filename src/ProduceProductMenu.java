@@ -10,8 +10,9 @@ public class ProduceProductMenu implements ProductMenu {
 		System.out.println("**********************************************************");
 
 		File file =new File("TextFiles/ProductInfo.txt");
-		Scanner sc = null;
+
 		try {
+			Scanner sc = null;
 			sc = new Scanner(file);
 			while (sc.hasNextLine())
 			{
