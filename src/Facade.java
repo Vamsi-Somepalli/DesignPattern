@@ -1,8 +1,9 @@
 import java.util.*;
 
 import static java.lang.System.exit;
-
+@SuppressWarnings(value = "unused")
 public class Facade {
+
 	private final Scanner ioscanner = new Scanner(System.in);
 	public Facade(){
 		System.out.println("**********************************************************");
@@ -37,8 +38,6 @@ public class Facade {
 	}
 
 
-	private int UserType;
-
 	private Product theSelectedProduct;
 
 	private int nProductCategory;
@@ -55,7 +54,7 @@ public class Facade {
 
 	}
 
-	private void setusertype(int user) { this.UserType=user;
+	private void setusertype(int user) {
 	}
 
 	public void addTrading() {
