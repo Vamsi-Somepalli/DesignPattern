@@ -24,8 +24,9 @@ public class Person {
 
 	}
 
-	public void CreateProductMenu() {
+	public ProductMenu CreateProductMenu() {
 
+		return null;
 	}
 
 }

@@ -1,13 +1,41 @@
-import java.io.*;
-public class Facade {
+import java.util.*;
 
+import static java.lang.System.exit;
+
+public class Facade {
+	private final Scanner ioscanner = new Scanner(System.in);
 	public Facade(){
 		System.out.println("**********************************************************");
 		System.out.println("                      Facade Pattern                            ");
 		System.out.println("**********************************************************");
-		new Loginpage();
+		BeginFacade();
 
 	}
+
+	private void BeginFacade() {
+		System.out.println("Facade is Initiated");
+		boolean Islogin = login();
+		if(!Islogin)
+		{
+			System.out.println("Login unsuccessfully");
+			exit(0);
+		}else{
+			System.out.println("Login successful");
+			System.out.println("\nEnter 1 for MeatProductMenu \n  Enter 2 for ProduceProductMenu\n");
+			String selectedMenu = ioscanner.next();
+			if(selectedMenu.equals("1")){
+				MeatProductMenu meat =new MeatProductMenu();
+				meat.showMenu();
+			}
+			if(selectedMenu.equals("2")){
+				ProduceProductMenu produce =new ProduceProductMenu();
+				produce.showMenu();
+			}
+
+
+		}
+	}
+
 
 	private int UserType;
 
@@ -20,7 +48,14 @@ public class Facade {
 	private Person thePerson;
 
 	public boolean login() {
-		return false;
+		Login loginobj = new Login();
+		int user = loginobj.selectedUserType();
+		setusertype(user);
+		return loginobj.Authenticate();
+
+	}
+
+	private void setusertype(int user) { this.UserType=user;
 	}
 
 	public void addTrading() {
@@ -65,8 +100,5 @@ public class Facade {
 
 	public void productOperation() {
 
-	}
-
-	public void Loginpage() {
 	}
 }
