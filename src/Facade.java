@@ -22,7 +22,7 @@ public class Facade {
 			exit(0);
 		}else{
 			System.out.println("Login successful");
-			System.out.println("\nEnter 1 for MeatProductMenu \n  Enter 2 for ProduceProductMenu\n");
+			System.out.println("\nEnter 1 for MeatProductMenu \n Enter 2 for ProduceProductMenu\n");
 			String selectedMenu = ioscanner.next();
 			if(selectedMenu.equals("1")){
 				MeatProductMenu meat =new MeatProductMenu();

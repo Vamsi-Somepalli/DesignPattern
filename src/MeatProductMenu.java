@@ -12,7 +12,7 @@ public class MeatProductMenu implements ProductMenu {
 		System.out.println("**********************************************************");
 
 
-		File file =new File("DesignPattern/TextFiles/ProductInfo.txt");
+		File file =new File("TextFiles/ProductInfo.txt");
 		Scanner sc = null;
 		try {
 			sc = new Scanner(file);
